@@ -216,7 +216,7 @@
         unlockedPDF = [[PDFDocument alloc]init];
         
         // Copy pages from unocked PDF document into new PDF document.
-        for (NSInteger currentPageIndex = 0; currentPageIndex < unlockedPDF.pageCount; currentPageIndex++) {
+        for (NSInteger currentPageIndex = 0; currentPageIndex < lockedPDF.pageCount; currentPageIndex++) {
             [unlockedPDF insertPage:[lockedPDF pageAtIndex:currentPageIndex] atIndex:currentPageIndex];
         }
         
